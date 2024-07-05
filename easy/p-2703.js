@@ -2,7 +2,7 @@
 // Easy
 // Companies
 // Write a function argumentsLength that returns the count of arguments passed to it.
- 
+
 
 // Example 1:
 
@@ -20,3 +20,19 @@
 // argumentsLength({}, null, "3"); // 3
 
 // Three values were passed to the function so it should return 3.
+
+var argumentsLength = function (...args) {
+    let i = true;
+    let count = 0;
+    while (i === true) {
+        if (args[count] !== undefined) {
+            count++;
+        }
+        else {
+            i = false
+        };
+    }
+    return count;
+};
+
+console.log(argumentsLength({}, null, "3"));
